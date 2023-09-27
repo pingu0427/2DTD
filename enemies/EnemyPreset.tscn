@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://dexwwp8pucpya"]
+
+[ext_resource type="Script" path="res://enemies/EnemyPreset.gd" id="1_sdfc3"]
+[ext_resource type="Texture2D" uid="uid://bap4tub8l7ge6" path="res://tiles/HAS Creature Pack (v.1.4)/dark bastion/devil/sprite_sheet_devil_0_16x16/tile004.png" id="2_24eo7"]
+[ext_resource type="Texture2D" uid="uid://byoemdr73pnv7" path="res://tiles/HAS Creature Pack (v.1.4)/dark bastion/devil/sprite_sheet_devil_0_16x16/tile005.png" id="3_lw3iw"]
+[ext_resource type="Texture2D" uid="uid://ceaijc26mhfr6" path="res://tiles/HAS Creature Pack (v.1.4)/dark bastion/devil/sprite_sheet_devil_0_16x16/tile006.png" id="4_x0wpb"]
+[ext_resource type="Texture2D" uid="uid://cto6c0y3w1unp" path="res://tiles/HAS Creature Pack (v.1.4)/dark bastion/devil/sprite_sheet_devil_0_16x16/tile007.png" id="5_22eeq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbsyc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_24eo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lw3iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x0wpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_22eeq")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6feu"]
+size = Vector2(13, 14)
+
+[node name="EnemyPreset" type="CharacterBody2D"]
+script = ExtResource("1_sdfc3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qbsyc")
+animation = &"move"
+frame_progress = 0.34194
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_d6feu")

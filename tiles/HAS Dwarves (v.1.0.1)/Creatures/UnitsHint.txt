@@ -1,0 +1,11 @@
+If you're having trouble naming units here's a quick tip.
+
+0    Miner             Carver
+1    Mineguard         Bearguard
+2    Hoplite           Legionite
+3    Runescribe        Enchanter
+4    Bear Cavalry      Polar Cavalry
+5    Antlered Elite    Calibou Elite
+6    Yeti              Behemoth
+
+Special thanks @ThingOnItsOwn for the names of the characters!

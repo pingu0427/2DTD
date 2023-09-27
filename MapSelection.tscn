@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuqhmpe0bd1og"]
+
+[ext_resource type="Script" path="res://MapSelection.gd" id="1_emjud"]
+
+[node name="MapSelection" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 768.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_emjud")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="Map1" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Map2" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Map3" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Map4" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Map5" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2

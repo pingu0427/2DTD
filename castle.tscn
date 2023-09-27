@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b63xx21uahapi"]
+
+[ext_resource type="Texture2D" uid="uid://bp4t0iyn1n1sf" path="res://images/Castle.png" id="1_wutac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iuvvw"]
+size = Vector2(30, 29)
+
+[node name="Castle" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wutac")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_iuvvw")
